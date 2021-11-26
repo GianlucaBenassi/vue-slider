@@ -42,6 +42,9 @@ const app = new Vue({
             } else {
                 this.activeImg++;
             }
+            
+            this.scrollLittleImg();
+            
         },
 
         prevImg: function() {
@@ -50,6 +53,14 @@ const app = new Vue({
             } else {
                 this.activeImg--;
             }
+
+            this.scrollLittleImg();
+
+        },
+
+        scrollLittleImg: function() {
+            const littleImages = document.getElementsByClassName('little-item');
+            littleImages[this.activeImg].scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
         }
 
     }
