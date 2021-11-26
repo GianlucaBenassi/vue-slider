@@ -30,8 +30,8 @@ const app = new Vue({
             'img': 'img/05.jpg'
             }
         ],
-        activeImg: 0
-
+        activeImg: 0,
+        timerObj: null
     },
 
     methods: {
@@ -64,11 +64,14 @@ const app = new Vue({
         },
 
         changeImg: function() {
-            const t = this;
-            setInterval(function() {
-                t.nextImg();
-            }, 3000)
+            this.timerObj = setInterval(this.nextImg, 3000);
+        },
+
+        stopChangeImg: function() {
+            clearInterval(this.timerObj);
+            this.timerObj = null;
         }
+        
 
     },
 

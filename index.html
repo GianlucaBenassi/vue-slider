@@ -15,7 +15,7 @@
 </head>
 <body>
     
-    <div class="container" id="root">
+    <div class="container" id="root" @mouseover="stopChangeImg()" @mouseleave="changeImg()">
 
         <!-- big image -->
         <div class="big-image">
@@ -49,9 +49,9 @@
             </div>
 
             <!-- buttons -->
-            <div id="prev" @click="prevImg"></div>
+            <div id="prev" @click="prevImg()"></div>
 
-            <div id="next" @click="nextImg"></div>
+            <div id="next" @click="nextImg()"></div>
 
             
         </div>
