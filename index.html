@@ -19,22 +19,19 @@
 
         <!-- big image -->
         <div class="big-image">
-            
 
             <!-- image items -->
-            <!-- <div class="big-item"> -->
+            <div class="big-item">
 
-                <!-- <img src="img/01.jpg" alt="image1"> -->
+                <img src="img/01.jpg" alt="big image">
 
                 <!-- image description -->
-                <!-- <div class="img-desc">
+                <div class="img-desc">
                     <h1>Paese1</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis facilis eligendi unde</p>
                 </div>
-            </div> -->
+            </div>
 
-
-            
         </div>
         <!-- / big image -->
 
@@ -44,26 +41,10 @@
             <div class="image-list">
 
                 <!-- image list item -->
-                <!-- <div class="little-item">
-                    <img src="img/01.jpg" alt="little image1">
+                <div class="little-item" v-for="(image, i) in images">
+                    <img :src="image.img" :alt="'little image' + i">
                     <div class="shadow"></div>
                 </div>
-                <div class="little-item active">
-                    <img src="img/01.jpg" alt="little image1">
-                    <div class="shadow"></div>
-                </div>
-                <div class="little-item">
-                    <img src="img/01.jpg" alt="little image1">
-                    <div class="shadow"></div>
-                </div>
-                <div class="little-item">
-                    <img src="img/01.jpg" alt="little image1">
-                    <div class="shadow"></div>
-                </div>
-                <div class="little-item">
-                    <img src="img/01.jpg" alt="little image1">
-                    <div class="shadow"></div>
-                </div> -->
 
             </div>
 

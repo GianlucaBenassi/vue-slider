@@ -3,7 +3,7 @@ const app = new Vue({
 
     data: {
 
-        images = [
+        images: [
             {
             'title': 'Svezia',
             'desc':  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
@@ -30,7 +30,7 @@ const app = new Vue({
             'img': 'img/05.jpg'
             }
         ]
-        
+
     },
 
     methods: {
