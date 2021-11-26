@@ -36,6 +36,22 @@ const app = new Vue({
 
     methods: {
 
+        nextImg: function() {
+            if (this.activeImg == this.images.length - 1) {
+                this.activeImg = 0;
+            } else {
+                this.activeImg++;
+            }
+        },
+
+        prevImg: function() {
+            if (this.activeImg == 0) {
+                this.activeImg = this.images.length - 1;
+            } else {
+                this.activeImg--;
+            }
+        }
+
     }
 
 });
