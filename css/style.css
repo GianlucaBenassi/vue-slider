@@ -1,0 +1,214 @@
+/* ***** commons ***** */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    height: 70vh;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ***** big image ***** */
+
+.big-image {
+    width: 100%;
+    height: 80%;
+}
+
+.big-item {
+    display: none;
+    height: 100%;
+    position: relative;
+}
+
+.big-item.active {
+    display: block;
+}
+
+.big-item .img-desc {
+    color: white;
+    text-align: right;
+
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    left: 20px;
+}
+
+/* ***** image list ***** */
+
+.little-image {
+    width: 100%;
+    height: 20%;
+    position: relative;
+}
+
+.image-list {
+    overflow: hidden;
+    height: 100%;
+
+    display: flex;
+}
+
+.little-item {
+    height: 100%;
+    position: relative;
+
+    flex-shrink: 0;
+    flex-basis: calc(100% / 3);
+}
+
+.little-item img {
+    filter: brightness(.5);
+}
+
+.little-item.active img {
+    filter: brightness(1);
+}
+
+.little-item.active .shadow {
+    box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#prev,
+#next {
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255,255,255,.8);
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    z-index: 1;
+}
+
+#prev:hover,
+#next:hover {
+    cursor: pointer;
+}
+
+#prev {
+    left: 20px;
+}
+
+#prev::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f053";
+}
+
+#next {
+    right: 20px;
+}
+
+#next::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f054";
+}
+
+
+/* $$$$$ small screens $$$$$ */
+
+@media screen and (min-width: 576px) {
+    .little-item {
+        flex-basis: calc(100% / 5);
+    }
+}
+
+
+/* $$$$$ large screens $$$$$ */
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 70%;
+        flex-direction: row;
+    }
+
+    .big-image {
+        width: 80%;
+        height: 100%;
+    }
+
+    .little-image {
+        width: 20%;
+        height: 100%;
+    }
+
+    .image-list {
+        flex-direction: column;
+    }
+
+    .little-item {
+        height: calc(100% / 5);
+    }
+
+    #prev,
+    #next {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #prev {
+        top: 20px;
+    }
+
+    #prev::before {
+        content: "\f077";
+    }
+
+    #next {
+        top: initial;
+        bottom: 20px;
+    }
+
+    #next::before {
+        content: "\f078";
+    }
+}
+
+/* +++++ debug +++++ */
+
+/* .debug .container {
+    background-color: blue;
+} */
+
+/* .debug .big-image {
+    background-color: red;
+}
+
+.debug .image-list {
+    background-color: green;
+} */
+
+/* .debug .little-item {
+    background-color: grey;
+    border: 1px solid black;
+} */
