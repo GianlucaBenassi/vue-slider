@@ -61,8 +61,19 @@ const app = new Vue({
         scrollLittleImg: function() {
             const littleImages = document.getElementsByClassName('little-item');
             littleImages[this.activeImg].scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+        },
+
+        changeImg: function() {
+            const t = this;
+            setInterval(function() {
+                t.nextImg();
+            }, 3000)
         }
 
+    },
+
+    mounted: function() {
+        this.changeImg();
     }
 
 });
