@@ -29,7 +29,8 @@ const app = new Vue({
             'desc':  'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.',
             'img': 'img/05.jpg'
             }
-        ]
+        ],
+        activeImg: 0
 
     },
 

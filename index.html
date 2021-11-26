@@ -23,12 +23,12 @@
             <!-- image items -->
             <div class="big-item">
 
-                <img src="img/01.jpg" alt="big image">
+                <img :src="images[activeImg].img" alt="big image">
 
                 <!-- image description -->
                 <div class="img-desc">
-                    <h1>Paese1</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis facilis eligendi unde</p>
+                    <h1>{{images[activeImg].title}}</h1>
+                    <p>{{images[activeImg].desc}}</p>
                 </div>
             </div>
 
