@@ -41,7 +41,7 @@
             <div class="image-list">
 
                 <!-- image list item -->
-                <div class="little-item" v-for="(image, i) in images" :class="i == activeImg ? 'active' : '' ">
+                <div class="little-item" v-for="(image, i) in images" :class="i == activeImg ? 'active' : '' " @click="activeImg = i">
                     <img :src="image.img" :alt="'little image' + i">
                     <div class="shadow"></div>
                 </div>
